@@ -1,0 +1,8 @@
+project '/Users/James/Desktop/xcode9Projects/GoogleDriveTest/GoogleDriveTest.xcodeproj'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+target 'GoogleDriveTest' do
+pod 'GoogleAPIClientForREST/Drive', '~> 1.2.1'
+pod 'Google/SignIn', '~> 3.0.3'
+end
