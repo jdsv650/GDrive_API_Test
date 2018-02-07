@@ -18,6 +18,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().scopes = scopes
+       // GIDSignIn.sharedInstance().signIn()
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -269,7 +270,9 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     @IBAction func googleSignInPressed(_ sender: UIButton)
     {
-        GIDSignIn.sharedInstance().signInSilently()
+        GIDSignIn.sharedInstance().signIn()
+
+        //GIDSignIn.sharedInstance().signInSilently()
     }
     
     
