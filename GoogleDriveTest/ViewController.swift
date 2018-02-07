@@ -204,8 +204,9 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                     fileR.identifier = file.identifier!
                     fileR.name = file.name!
                 }
-                text += "\(file.name!) (\(file.identifier!)"
+                text += "\(file.name!) (\(file.identifier!) \n"
 
+                /***
                 if let created = file.createdTime
                 {
                     text += "\(created.date)"
@@ -214,10 +215,12 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
                 if let modified = file.modifiedTime
                 {
                     text += "\(modified.date)"
-                }
+                } ****/
             }
         } else {
             text += "No files found."
+            fileR.identifier = nil
+            fileR.name = nil
         }
         showAlert(title: "", message: text)
     }
